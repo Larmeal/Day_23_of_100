@@ -21,6 +21,7 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+    # ต้องการจะสร้าง รถ หลาย ๆ คันซึ่งเป็น instance ที่แตกต่างกัน หากอยู่ใน loop อยู่แล้วก็จะสร้าง instance หลาย ๆ อันขึ้นมาได้
     car.genarate()
     car.move()
     scoreboard.score()
@@ -29,7 +30,8 @@ while game_is_on:
         scoreboard.add_score()
         car.increment()
         play.finish()
-
+    
+    # ที่ต้องวนลูปแบบนี้เพราะว่า ต้องการจะ check กับรถทุกคันว่าตัว player ได้เข้าใกล้กับตัวรถ รึป่าว
     for i in car.all_car:
         if i.distance(play) < 20:
             game_is_on = False
