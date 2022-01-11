@@ -21,7 +21,7 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
-    # ต้องการจะสร้าง รถ หลาย ๆ คันซึ่งเป็น instance ที่แตกต่างกัน หากอยู่ใน loop อยู่แล้วก็จะสร้าง instance หลาย ๆ อันขึ้นมาได้
+    # ต้องการจะสร้าง รถ หลาย ๆ คันซึ่งเป็น instance ที่แตกต่างกัน หากอยู่ใน loop อยู่แล้วก็จะสร้าง instance หลาย ๆ อันขึ้นมาได้เลยไม่ต้องกำหนด loop เพื่อสร้างอีกที
     car.genarate()
     car.move()
     scoreboard.score()
